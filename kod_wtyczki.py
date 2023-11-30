@@ -57,7 +57,7 @@ class ClickTool(QgsMapToolEmitPoint):
         # Calculate the azimuth in radians
         azimuth_rad = math.atan2(delta_y, delta_x)
 
-        # Convert radians to degrees
+        # Convert radians to degrees; get rid off negative values
         azimuth_deg = (degrees(azimuth_rad) + 360) % 360
 
         return azimuth_deg
